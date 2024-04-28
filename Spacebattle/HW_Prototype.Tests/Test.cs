@@ -30,5 +30,8 @@ public class Test
         Assert.False(ReferenceEquals(carrot, carrotMyClone));
         Assert.False(ReferenceEquals(blueberry, blueberryClone));
         Assert.False(ReferenceEquals(blueberry, blueberryMyClone));
+        
+        // ICloneable: лишний каст к типу -- метод Clone() возвращает object, который приходится приводить к более строгому типу
+        // IMyCloneable: лишен недостатка приведения типов при клонировании
     }
 }
